@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Curriculum Vitae</title>
+	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_cv.css')}}">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+
+<body>
+	<div class="cv">
+		<!--Lado Izquierdo con el perfil -->
+		<div class="lado_izquierdo">
+			<div class="cv_perfil">
+				<img src="https://i.pinimg.com/474x/fe/59/b6/fe59b686754d3d2b071d254587c98fdc.jpg" alt="foto_de_perfil">
+			</div>
+			
+			<!--La parte del contenido hacia abajo -->
+			<div class="cv_contenido">
+				
+				<!--Información personal -->
+				<div class="cv_item cv_descripcion">
+					<div class="titulo">
+						<p class="resaltado">¿Quién soy?</p>
+					</div>
+						<p class="datos">{{datos_personales[8]}}</p>
+				</div>
+				
+				
+				<div class="cv_item cv_infor">
+					<div class="titulo">
+					 <p class="resaltado">{{datos_personales[0]}} {{datos_personales[1]}} </p>
+					 <p class="regular">{{datos_personales[2]}}</p>
+					</div>
+					
+					<ul>
+						<li>
+							<div class="icono">
+								<i class="fas fa-map-signs"></i>
+							</div>
+							<div class="datos">
+								{{datos_personales[3]}} - {{datos_personales[4]}} 
+								<br /> {{datos_personales[5]}}
+							</div>
+						</li>
+						
+						
+						<li>
+							<div class="icono">
+								<i class="fas fa-mobile-alt"></i>
+							</div>
+							<div class="datos">
+								{{datos_personales[6]}}
+							</div>
+						</li>
+						
+						<li>
+							<div class="icono">
+								<i class="fas fa-envelope"></i>
+							</div>
+							<div class="datos">
+								{{datos_personales[7]}}
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+				
+				
+				<!--Habilidades o aquello que manejo-->
+				<div class="cv_item cv_habilidades">
+					<div class="titulo">
+					 <p class="resaltado">Habilidades</p>
+					</div>
+					<ul>
+
+						{% for habilidad in habilidades %}
+							<li>
+								<div class="habilidades_cosa">
+									{{habilidad[0]}}
+								</div>
+							
+								<div class="habilidades_progreso">
+									<span style="width: {{habilidad[1]}};"></span>
+								</div>
+								<div class="habilidades_porcentaje"> {{habilidad[1]}}</div>
+							</li>
+						{% endfor %}
+						
+					</ul>
+					
+					
+				</div>
+				
+				<!--Redes sociales en las que me encuentro -->
+				<div class="cv_item cv_redes">
+					<div class="titulo">
+					<p class="resaltado">Redes</p>
+					</div>
+					
+					<ul>
+						
+						<li>
+							<div class="icono">
+								<i class="fab fa-linkedin"></i>
+							</div>
+							<div class="datos">
+								<p class="resaltado_2">
+									{{datos_personales[9]}}
+								</p>
+							</div>
+						</li>
+					
+					
+					</ul>
+					<!--Fin de las redes sociales -->
+					
+				</div>
+				
+				<!-- -->
+			</div>
+			<!--Fin del contenido -->
+		</div>
+		<!--Fin del lado izquierdo -->
+		
+		
+		<div class="lado_derecho">
+
+			<div class="cv_item cv_experiencia">
+				<div class="titulo">
+					<p class="resaltado">Experiencia laboral</p>
+				</div>
+				<ul>
+					{% for campo in exp_laboral %}
+						<li>
+							<div class="fecha">{{campo[2]}} - {{campo[3]}}</div>
+							<div class="info">
+								<p class="resaltado_2"> {{campo[1]}}</p>
+								<p>{{campo[0]}}</p>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			
+			
+			</div>
+			
+			<!--Formación  -->
+			<div class="cv_item cv_educacion">
+				<div class="titulo">
+					<p class="resaltado">Formación</p>
+				</div>
+				<ul>
+					{% for campo in estudios %}
+						<li>
+							<div class="fecha">{{campo[2]}} - {{campo[3]}}</div>
+							<div class="info">
+								<p class="resaltado_2"> {{campo[0]}}</p>
+								<p>{{campo[1]}}</p>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			
+			</div>
+			
+			
+
+	
+			<!-- logros-->
+			<div class="cv_item ">
+				<div class="titulo">
+					<p class="resaltado">Logros</p>
+				</div>
+				<ul>
+					{% for logro in logros %}
+						<tr>
+							<td><div class="info">
+								<p class="resaltado_2"> - {{logro}}</p>
+							</div>
+							<td/>
+						</tr>
+					{% endfor %}
+				</ul>
+			
+			</div>
+
+
+			<!-- Intereses-->
+			<div class="cv_item cv_idiomas">
+				<div class="titulo">
+					<p class="resaltado">Intereses</p>
+				</div>
+				
+				<ul>
+					<li><i class="fas fa-book"></i></li>
+					<li><i class="fas fa-gamepad"></i></li>
+					<li><i class="fas fa-music"></i></li>
+					<li><i class="fab fa-pagelines"></i></li>
+				</ul>
+				<br />
+				<ul>
+					{% for interes in intereses %}
+	
+						<tr>
+							<td><div class="info">
+								<p class="resaltado_2"> - {{interes}}</p>
+							</div>
+							<td/>
+						</tr>
+					{% endfor %}
+				</ul>
+			
+			</div>
+
+			<!-- Referencias-->
+			<div class="cv_item ">
+				<div class="titulo">
+					<p class="resaltado">Referencias</p>
+				</div>
+
+				<br />
+				<ul>
+					{% for referencia in referencias %}
+						<li>
+							<div class="info">
+								<p class="resaltado_2"> * {{referencia[0]}} - {{referencia[1]}}</p>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

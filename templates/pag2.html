@@ -1,0 +1,171 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form method="POST">
+    <div class="caja" >
+        <div class="titulo">
+            Parte 2
+            <hr />
+        </div>
+        
+
+        <div class="form" >
+            <!-- Estudios-->
+            <div class="subtitulo">
+                Estudios
+            </div>
+            <p>Introducir de más reciente a más antiguo: </p> <br />
+
+            <div class="camp_entrada">
+               
+                <label> Inicio</label>
+                <input type="text" class="input" name="est_inicio" placeholder="201x">
+
+            
+
+                <label> Fin</label>
+                <input type="text" class="input" name="est_fin" placeholder="201x">
+            </div>
+
+            <div class="camp_entrada">
+                <label>Lugar</label>
+                <input type="text" class="input" name="lugar">
+
+            </div>
+            
+            <div class="camp_entrada">
+                <label>Estudio</label>
+                <input type="text" class="input" name="estudio">
+
+            </div>
+
+            <button class="button" formaction="{{ url_for('pag2')}}" formethod="post">Insertar</button>
+            
+            <br />
+            <br /> 
+            <table>
+                <tr>
+                    <th>Lugar</th>
+                    <th>Estudio</th>
+                    <th>Año de inicio</th>
+                    <th>Año de fin</th>
+
+                </tr>
+                {% for campo in estudios %}
+                    <tr>
+                        <th>{{campo[0]}}</th>
+                        <td>{{campo[1]}}</td>
+                        <td>{{campo[2]}}</td>
+                        <td>{{campo[3]}}</td>
+                    <tr/>
+                {% endfor %}
+            
+
+            </table>
+
+            <br /> <br /> <br /> <br /> <br />
+            <hr />
+
+            <!--EXPERIENCIA LABORAL-->
+            <br />
+            
+            <div class="subtitulo">
+                Experiencia laboral
+            </div>
+
+            <p>Introducir de más reciente a más antiguo: </p> <br />
+            <div class="camp_entrada">
+                <label> Inicio</label>
+                <input type="text" class="input" name="exp_inicio" placeholder="201x">
+
+            
+
+                <label>Fin</label>
+                <input type="text" class="input" name="exp_fin" placeholder="201x">
+            </div>
+
+            <div class="camp_entrada">
+                <label>Accion</label>
+                <input type="text" class="input" name="accion">
+
+            </div>
+            
+            <div class="camp_entrada">
+                <label>Puesto</label>
+                <input type="text" class="input" name="puesto">
+
+            </div>
+
+            <button class="button" formaction="{{ url_for('pag2')}}" formethod="post">Insertar</button>
+
+            <br />
+            <br /> 
+            <table>
+                <tr>
+                    <th>Puesto</th>
+                    <th>Accion</th>
+                    <th>Año de inicio</th>
+                    <th>Año de fin</th>
+
+                </tr>
+                {% for campo in exp_laboral %}
+                    <tr>
+                        <th>{{campo[1]}}</th>
+                        <td>{{campo[0]}}</td>
+                        <td>{{campo[2]}}</td>
+                        <td>{{campo[3]}}</td>
+                    <tr/>
+                {% endfor %}
+
+            </table>
+            <br /> <br /> <br /> <br /> 
+            <hr />
+
+            <br />
+            <!-- LOGROS-->
+            <div class="subtitulo">
+                Logros
+            </div> 
+
+            <div class="camp_entrada">
+                <label>Logro </label>
+                <input type="text" class="input" name="logro">
+
+            </div>
+            <button class="button" formaction="{{ url_for('pag2')}}" formethod="post">Insertar</button>
+
+
+            <br />
+            <table>
+                <tr>
+                    <th>Logros</th>
+                </tr>
+                {% for logro in logros %}
+                    <tr>
+                    <td> {{logro}}<td/>
+                    <tr />
+                    {% endfor %}
+
+            </table>
+        </div>
+
+        <br /><br /><br /><br /><br /><br />
+    
+        <div class="camp_entrada">
+            <button class="btn" formaction="{{ url_for('pag3')}}" formmethod="post">Siguiente</button>
+
+        </div>
+    </div>
+    
+    <br >
+    
+
+
+</form>
+
+{% endblock %}
+
+
+
+    

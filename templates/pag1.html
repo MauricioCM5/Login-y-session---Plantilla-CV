@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<form action="{{url_for('pag2')}}" method="POST">
+    <div class="header">
+        <h1>CREA TU CV</h1>
+    </div>
+    
+    
+    <div class="caja" >
+        <div class="titulo">
+            Parte 1: Datos personales
+        </div>
+    
+        <div class="form" >
+            <div class="camp_entrada">
+                <label>Nombres</label>
+                <input type="text" class="input" name="nombres">
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Apellidos</label>
+                <input type="text" class="input" name="apellidos">
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Título</label>
+                <input type="text" class="input" name="titulo">
+            </div>
+    
+            <div class="camp_entrada">
+                <label>País</label>
+                <input type="text" class="input" name="pais">
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Ciudad</label>
+                <input type="text" class="input" name="ciudad">
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Sexo</label>
+                <div class="select_opc">
+                    <select>
+                        <option value="">Seleccione</option>
+                        <option value="male">Masculino</option>
+                        <option value="female">Femenino</option>
+                    </select>
+    
+                </div>
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Telefono</label>
+                <input type="text" class="input" name="telefono" placeholder="000 000 000">
+    
+            </div>
+
+            <div class="camp_entrada">
+                <label>Email address</label>
+                <input type="text" class="input" name="email" placeholder="email@place.com">
+    
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Dirección</label>
+                <textarea class="area_de_texto" name="direccion"></textarea>
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Linkedin</label>
+                <input type="text" class="input" name="linkedin">
+    
+            </div>
+    
+            <div class="camp_entrada">
+                <label>Presentación</label>
+                <textarea class="area_de_texto" name="presentacion"></textarea>
+            </div>
+    
+            <div class="camp_entrada">
+                <input type="submit" value="Siguiente" class="btn" >
+                <br />
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+</form>
+
+
+{% endblock %}
+
+

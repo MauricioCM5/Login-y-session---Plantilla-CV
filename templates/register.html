@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <script type="text/javascript" src="{{url_for('static', filename='functions.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='register_extra.js')}}"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_register.css')}}">
+    
+	
+</head>
+
+<body>
+
+    <div class="title">
+        <h2> Registration page to create a CV </h2>
+    </div>
+    <div class="register-page">
+        <div class="form">
+            <form class="register-form" method="POST">
+                <p class="subtitle">REGISTER</p>
+                <br />
+                <p class="left-leaning">Username</p>
+                <input class="input" type="text" id="username" name="username" onmouseout="validation_on_username()" onkeydown="validation_on_username()" placeholder="Username" >
+                <div id="text_alert"></div>
+                <p class="left-leaning">Password</p>
+                <input class="input" type="password" id="password" name="password" onmouseout="validation_on_username()" onkeydown="validation_on_username()" placeholder="Password" >
+                <div id="text_alert2"></div>
+                <br />
+                <button type="submit" id="submit" formethod="post"> Register</button>
+                <br />
+                <p class="message">Already registered? <a href="{{url_for('login')}}">Sign In</a></p>
+            </form>
+        </div>
+
+    </div>
+    
+
+
+    
+</body>
+
+</html>

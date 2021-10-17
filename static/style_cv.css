@@ -1,0 +1,240 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+
+body{
+	background: #585c68;
+	font-size: 14px;
+	line-height: 22px;
+	color: #555555;
+}
+
+.resaltado{
+	font-weight: 700;
+	font-size: 20px;
+	text-transform: uppercase;
+	
+}
+
+.resaltado_2{
+	font-weight: 500;
+	font-size: 16px;
+	
+}
+.cv{
+	width: 800px;
+	height: auto;
+	display: flex;
+	margin: 50px auto;
+}
+
+
+.cv .lado_izquierdo{
+	width: 280px;
+	background: #0bb5f4;
+}
+
+.cv .lado_izquierdo .cv_perfil{
+	width: 100%;
+	height: 280px;
+	
+}
+
+.cv .lado_izquierdo .cv_perfil img{
+	width: 100%;
+	height: 100%;
+	
+}
+
+.cv .lado_izquierdo .cv_contenido{
+	padding: 0 25px;
+}
+
+.cv .titulo{
+	margin-bottom: 20px;
+	
+}
+
+.cv .lado_izquierdo .resaltado{
+	color:#fff;
+}
+
+.cv .lado_izquierdo .regular{
+	color: #b1eaff;
+}
+
+.cv .cv_item{
+	padding: 25px 0;
+	border-bottom: 2px solid #b1eaff;
+}
+
+.cv .lado_izquierdo .cv_item:last-child,
+.cv .lado_derecho .cv_item:last-child{
+	border-bottom: 0px;
+} 
+
+.cv .lado_izquierdo ul li{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.cv .lado_izquierdo ul li:last-child{
+	margin-bottom: 0;
+}
+
+.cv .lado_izquierdo ul li .icono{
+	width: 35px;
+	height: 35px;
+	background: #fff;
+	color: #0bb5f4;
+	border-radius: 50%;
+	margin-right: 15px;
+	font-size: 16px;
+	position: relative;
+}
+
+.cv .icono i,
+.cv .lado_derecho .cv_idiomas ul li i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cv .lado_izquierdo .datos,
+.cv .lado_izquierdo ul li .datos{
+	color: #b1eaff;
+}
+
+.cv .lado_izquierdo .cv_habilidades ul li{
+	color: #b1eaff;
+	justify-content: space-between;
+}
+
+.cv .lado_izquierdo .cv_habilidades ul li .habilidades_cosa{
+	width: 25%;
+}
+
+.cv .lado_izquierdo .cv_habilidades ul li .habilidades_progreso{
+	width: 60%;
+	margin: 0 5 px;
+	height: 5px;
+	background: #009fd9;
+	position:relative;
+}
+
+.cv .lado_izquierdo .cv_habilidades ul li .habilidades_porcentaje{
+	width: 15%;
+}
+
+.cv .lado_izquierdo .cv_habilidades ul li .habilidades_progreso span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #fff;
+}
+
+
+
+
+/*Lado derecho. */
+
+.cv .lado_derecho{
+	width: 520px;
+	background: #fff;
+	padding:25px;
+}
+
+.cv .lado_derecho .resaltado{
+	color: #0bb5f4;
+}
+
+.cv .lado_derecho .cv_experiencia ul, 
+.cv .lado_derecho .cv_educacion ul{
+	padding-left: 40px;
+	overflow: hidden;
+}
+
+.cv .lado_derecho ul li{
+	position: relative;
+}
+
+.cv .lado_derecho ul li .fecha{
+	font-size: 16px;
+	font-weight: 50;
+	margin-bottom: 15px;
+}
+
+.cv .lado_derecho ul li .info{
+	margin-bottom: 20px;
+}
+
+.cv .lado_derecho ul li:last-child .info{
+	margin-bottom: 0;
+}
+
+.cv .lado_derecho .cv_experiencia ul li:before, 
+.cv .lado_derecho .cv_educacion ul li:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: -25px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	border: 2px solid #0bb5f4;
+}
+
+
+
+.cv .lado_derecho .cv_experiencia ul li:after, 
+.cv .lado_derecho .cv_educacion ul li:after{
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: -21px;
+	width: 3px;
+	height: 115px;
+	background: #0bb5f4
+}
+
+.cv .lado_derecho .cv_idiomas ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cv .lado_derecho .cv_idiomas ul li {
+	width: 80px;
+	height: 80px;
+	border: 2px solid #0bb5f4;
+	border-radius: 50%;
+	position:relative;
+	color:#0bb5f4;
+}
+
+.cv .lado_derecho .cv_idiomas ul li i { 
+	font-size: 30px;
+}
+
+.cv .lado_derecho .cv_idiomas ul li:before {
+	content: "";
+	position: absolute;
+	top: 40px;
+	right: -52px;
+	width: 50px;
+	height: 2px;
+	background: #0bb5f4;
+}
+
+.cv .lado_derecho .cv_idiomas ul li:last-child:before {
+	display:none
+}

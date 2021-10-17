@@ -1,0 +1,192 @@
+/*Style for all pages*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+body{
+    background: #446cb6;
+    padding: 0 10px;
+    
+}
+
+th{
+    background-color: #3476a1;
+    color: white;
+
+}
+
+
+th, td {
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    background: rgb(9, 26, 179);
+    margin: 0px 0px;
+    padding: 40px;
+    color: #fff;
+    box-shadow: 1px 1px 2px rgba(80, 77, 77, 0.125);
+}
+
+.caja{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+
+
+}
+
+.caja .titulo{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.caja .subtitulo{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 23px;
+    color: #000001;
+    text-transform: uppercase;
+    text-align: left;
+
+}
+
+
+
+
+.caja.form .camp_entrada{
+    width: 100%;
+}
+
+.caja .form .camp_entrada{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.caja .form .camp_entrada label{
+    width: 200px;
+    color: #646464;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.caja .form .camp_entrada .input,
+.caja .form .camp_entrada .area_de_texto{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3 ease;
+}
+
+.caja .form .camp_entrada .area_de_texto{
+    resize: none;
+    height: 125px;
+}
+
+.caja .form .camp_entrada .select_opc{
+    position: relative;
+    width: 100%;
+    height: 37px;
+
+}
+
+.caja .form .camp_entrada .select_opc select{
+    appearance: none;
+    border: 1px solid #d5dbd9;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.caja .form .camp_entrada .select_opc:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 8px solid;
+    border-color: #757575 transparent transparent transparent;
+    pointer-events: none;
+}
+
+.caja .form .camp_entrada .input:focus,
+.caja .form .camp_entrada .area_de_texto:focus,
+.caja .form .camp_entrada select:focus{
+    border: 1px solid #56cac4;
+}
+
+.caja .form .camp_entrada p{
+    font-size: 14px;
+    color: #757575;
+
+}
+.caja .form .button {
+    background-color: #d3d3d3ce; 
+    color: black;
+    border:rgb(31, 8, 83);
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    top: 0;
+    position: relative;
+    left: 45%;
+}
+
+
+.caja .form .camp_entrada .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #fec107;
+    color : #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+
+.caja .form .camp_entrada .btn:last-child{
+    margin-bottom: 0;
+}
+.caja .form .camp_entrada .btn:hover{
+    background: #ffd658;
+}
+
+.btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #4349a0;
+    color : #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+.btn:last-child{
+    margin-bottom:0;
+}

@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form method="POST">
+    <div class="caja" >
+        <div class="titulo">
+            Parte 3
+            <hr />
+        </div>
+        
+
+        <div class="form" >
+            <div class="subtitulo">
+                Habilidades
+            </div>
+
+            <!-- Habilidades-->
+
+            
+            <div class="camp_entrada">
+                <label> Habilidad</label>
+                <input type="text" class="input" name="habilidad">
+            </div>
+
+            <div class="camp_entrada">
+                <label>Dominio</label>
+                <div class="select_opc">
+                    <select>
+                        <option value="dominio" name="dominio">0%</option>
+                        <option value="dominio" name="dominio">25%</option>
+                        <option value="dominio" name="dominio">50%</option>
+                        <option value="dominio" name="dominio">75%</option>
+                        <option value="dominio" name="dominio">85%</option>
+                        <option value="dominio" name="dominio">100%</option>
+                    </select>
+    
+                </div>
+            </div>
+
+            <button class="button" formaction="{{ url_for('pag3')}}" formethod="post">Insertar</button>
+
+            <br />
+
+            <table>
+                <tr>
+                    <th>Habilidad</th>
+                    <th>Dominio</th>
+                </tr>
+                {% for habilidad in habilidades %}
+                    <tr>
+                        <td> {{habilidad[0]}}</td>
+                        <td> {{habilidad[1]}}</td>
+                    </tr>
+
+                {% endfor %}
+            </table>
+
+            <br /> <br /> <br />
+            <!-- Intereses-->
+
+            <hr />
+            <br />  
+            <div class="subtitulo">
+                Intereses
+            </div>
+
+            <div class="camp_entrada">
+                <label> Interes</label>
+                <input type="text" class="input" name="interes">
+            </div>
+            <button class="button" formaction="{{ url_for('pag3')}}" formethod="post">Insertar</button>
+            <br />
+
+            <table>
+                <tr>
+                    <th>Intereses</th>
+                </tr>
+                {% for interes in intereses %}
+                    <tr>
+                        <td>{{interes}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <br /> <br /> <br /> 
+            <!-- Referencias-->
+            <hr /> 
+            <br /> 
+
+            <div class="subtitulo">
+                Referencias
+            </div>
+
+            <div class="camp_entrada">
+                <label>Numero de contacto</label>
+                <input type="text" class="input" name="r_telefono">
+            </div>
+            <div class="camp_entrada">
+                <label>Email de contacto</label>
+                <input type="text" class="input" name="r_email">
+            </div>
+            <button class="button" formaction="{{ url_for('pag3')}}" formethod="post">Insertar</button>
+            <br />
+
+            <table>
+                <tr>
+                    <th>Numero</th>
+                    <th>Email</th>
+                </tr>
+
+                {% for referencia in referencias %}
+                    <tr>
+                        <td> {{referencia[0]}}</td>
+                        <td>{{referencia[1]}}</td>
+                    <tr />
+                    {% endfor %}
+
+            </table>
+
+        </div>
+        
+        <br /> <br /> <br /> <br /> 
+
+        <div class="camp_entrada">
+            <button class="btn" formaction="{{ url_for('plantilla_cv')}}" formmethod="post">Siguiente</button>
+
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}

@@ -11,4 +11,4 @@ Creará un usuario con contraseña y deberá usarlo para acceder en login, luego
 Notas:
 - Requerimientos para el virtual enviroment, debe tener las siguientes librerías: de Flask: {g, redirect, render_template, request, session, url_for}
 
-- Verifiquelas con pip, están inmplementadas al instalar Flask
+- Verifiquelas con pip, están implementadas al instalar Flask

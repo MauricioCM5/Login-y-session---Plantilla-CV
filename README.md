@@ -4,7 +4,7 @@ La implementación está en la branch 'master'
 
 Para empezar, iniice su propio virtual environment con "application" en la opción set FLASK_APP. Luego, ejecute con flask run.
 
-En primer lugar se encontrará con la página /home, de la cual debe hacer click a /register y empezará con el proceso de crear su currículo con la plantilla. 
+En primer lugar, puede ir directamente a /register o también se encontrará con la página /home, de la cual debe hacer click a /register y empezará con el proceso de crear su currículo con la plantilla. 
 
 Creará un usuario con contraseña y deberá usarlo para acceder en login, luego, prosiga y cree su currículo. 
 
